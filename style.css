@@ -16,3 +16,175 @@ h4 {
 p {
     font-family: 'Roboto', sans-serif;
 }
+
+article {
+    height: 100vh;
+    padding: 1rem 3rem;
+}
+
+article h2 {
+    text-align: left;
+    padding-bottom: 1rem;
+}
+
+/* navigation */
+
+.nav-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
+
+.logo {
+    width: 2rem;
+    height: 2rem;
+    background-color: orange;
+}
+
+.menu-item {
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1.2rem;
+    height: 4rem;
+    transition: background-color 200ms;
+}
+
+.menu-item:hover {
+    background-color: rgb(226, 226, 226);
+    cursor: pointer;
+}
+
+/* header */
+
+header {
+    padding-top: 4rem;
+    background-image: url();
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(131, 181, 4);
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+/* about */
+
+.about {
+    height: 100vh;
+    background-color: orange;
+}
+
+.about-container {
+    display: flex; 
+    height: 80%;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.about-container img {
+    border-radius: 2rem;
+    width: 40vw;
+    max-width: 350px;
+    align-self: flex-start;
+}
+
+.about-container div {
+    max-width: 400px; 
+}
+
+.about-container div h3 {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.about-container div p {
+    font-size: 1.5rem;
+}
+    
+
+/* education */
+
+.education {
+    background-color: rgb(152, 255, 178);
+}
+
+.education-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.education-container div {
+    max-width: 400px;
+}
+
+.education-container div h3 {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.education-container div p {
+    font-size: 1.5rem;
+}
+
+.education img {
+    border-radius: 2rem;
+    width: 40vw;
+    align-self: flex-start;
+    max-width: 350px;
+}
+
+/* projects */
+
+.projects {
+    background-color: rgb(191, 191, 1);
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.project img {
+    width: 40vw;
+    border-radius: 1rem;
+}
+
+.project h4 {
+    text-align: center;
+}
+
+/*contacts */
+
+.contacts-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.form-box {
+    background-color: aquamarine;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.contacts {
+    background-color: aquamarine;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/* footer */
+
+footer {
+    background-color: aquamarine;
+}

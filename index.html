@@ -24,58 +24,70 @@
     <section>
         <article class="about">
             <h2>About Me</h2>
-            <img src="./assets/profile.png" alt="profile picture">
-            <h3>Renārs Miljons</h3>
-            <p>
-                Lorem ipsum my dripsum is pricsum I like to study n stuff.
-                <br> Big block of very interesting text about who I am as a person goes here, should be consise and very informative.
-                <br> Yes Sir.
-            </p>
+            <div class="about-container">
+                <img src="./assets/profile.png" alt="profile picture">
+                <div>
+                    <h3>Renārs Miljons</h3>
+                    <p>
+                        Lorem ipsum my dripsum is pricsum I like to study n stuff.
+                        <br> Big block of very interesting text about who I am as a person goes here, should be consise and very informative.
+                        <br> Yes Sir.
+                    </p>
+                </div>
+            </div>
         </article>
         <article class="education">
             <h2>Education</h2>
-            <h3>Art Academy of Latvia</h3>
-            <p>
-                I studied painting n stuff this text should tell about some of the experience and skills I gained learning as a painter.
-                <br> Also a link to some of my paintings and drawings because why not.
-            </p>
-            <button class="art-btn" onclick="location.href='#'">See my art<span>></span></button>
-            <img src="./assets/akademija.png" alt="picture of art academy">
+            <div class="education-container">
+                <div>
+                    <h3>Art Academy of Latvia</h3>
+                    <p>
+                        I studied painting n stuff this text should tell about some of the experience and skills I gained learning as a painter.
+                        <br> Also a link to some of my paintings and drawings because why not.
+                    </p>
+                    <button class="art-btn" onclick="location.href='#'">See my art<span>></span></button>
+                </div>
+                <img src="./assets/akademija.png" alt="picture of art academy">
+            </div>
         </article>
-        <artice class="projects">
+        <article class="projects">
             <h2>Projects</h2>
-            <div class="project" onclick="location.href='https://github.com/r-miljons/GamblerGleb'">
-                <img src="./assets/gamblergleb.gif">
-                <h4>Gambler Gleb</h4>
+            <div class="projects-container">
+                <div class="project" onclick="location.href='https://github.com/r-miljons/GamblerGleb'">
+                    <img src="./assets/gamblergleb.gif">
+                    <h4>Gambler Gleb</h4>
+                </div>
+                <div class="project" onclick="location.href='https://github.com/r-miljons/FallingKeys'">
+                    <img src="./assets/fallingkeys.gif">
+                    <h4>Falling Keys</h4>
+                </div>
             </div>
-            <div class="project" onclick="location.href='https://github.com/r-miljons/FallingKeys'">
-                <img src="./assets/fallingkeys.gif">
-                <h4>Falling Keys</h4>
-            </div>
-        </artice>
-        <artice class="Contact Me">
+        </article>
+        <article class="contact-me">
             <h2>Contact Me</h2>
-            <div class="form-box">
-                <form class="message-form">
-                    <label for="name">Name</label><br>
-                    <input type="text" name="name" id="name" placeholder="Enter your name" required><br>
-                    <br>
-                    <label for="message">Message</label><br>
-                    <textarea rows="4" cols="50" name="message" form="message-form" id="message" placeholder="Enter your message..." required></textarea><br>
-                    <input type="submit" value="Send">
-                </form>
+            <div class="contacts-container">
+                <div class="form-box">
+                    <form class="message-form">
+                        <label for="name">Name</label><br>
+                        <input type="text" name="name" id="name" placeholder="Enter your name" required><br>
+                        <br>
+                        <label for="message">Message</label><br>
+                        <textarea rows="4" cols="50" name="message" form="message-form" id="message" placeholder="Enter your message..." required></textarea><br>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+                <aside class="contacts">
+                    <div class="contact">
+                        <img src="./assets/call.png">
+                        <p>+47183272357</p>
+                    </div>
+                    <div class="contact">
+                        <img src="./assets/mail.png">
+                        <p>reku.miljons@gmail.com</p>
+                    </div>
+                </aside>
             </div>
-            <aside class="contacts">
-                <div class="contact">
-                    <img src="./assets/call.png">
-                    <p>+47183272357</p>
-                </div>
-                <div class="contact">
-                    <img src="./assets/mail.png">
-                    <p>reku.miljons@gmail.com</p>
-                </div>
-            </aside>
-        </artice>
+        </article>
     </section>
     <footer>
 
