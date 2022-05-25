@@ -12,17 +12,18 @@
     <nav class="nav-box">
         <div class="logo"></div>
         <ul class="menu">
-            <div class="menu-item"><p>About Me</p></div>
-            <div class="menu-item"><p>Education</p></div>
-            <div class="menu-item"><p>Projects</p></div>
-            <div class="menu-item"><p>Contact Me</p></div>
+            <div class="menu-item" onclick="location.href='#about'"><p>About Me</p></div>
+            <div class="menu-item" onclick="location.href='#education'"><p>Education</p></div>
+            <div class="menu-item" onclick="location.href='#projects'"><p>Projects</p></div>
+            <div class="menu-item" onclick="location.href='#contacts'"><p>Contact Me</p></div>
         </ul>
     </nav>
+    <section>
+    <div class="header-wrapper">
     <header>
         <h1>Renārs Miljons</h1>
     </header>
-    <section>
-        <article class="about">
+        <article class="about" id="about">
             <h2>About Me</h2>
             <div class="about-container">
                 <img src="./assets/profile.png" alt="profile picture">
@@ -35,8 +36,14 @@
                     </p>
                 </div>
             </div>
+            <div class="wave one">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
         </article>
-        <article class="education">
+    </div>
+        <article class="education" id="education">
             <h2>Education</h2>
             <div class="education-container">
                 <div>
@@ -45,12 +52,17 @@
                         I studied painting n stuff this text should tell about some of the experience and skills I gained learning as a painter.
                         <br> Also a link to some of my paintings and drawings because why not.
                     </p>
-                    <button class="art-btn" onclick="location.href='#'">See my art<span>></span></button>
+                    <button class="art-btn" onclick="location.href='#'">See my art <span>></span></button>
                 </div>
                 <img src="./assets/akademija.png" alt="picture of art academy">
             </div>
+            <div class="wave two">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
         </article>
-        <article class="projects">
+        <article class="projects" id="projects">
             <h2>Projects</h2>
             <div class="projects-container">
                 <div class="project" onclick="location.href='https://github.com/r-miljons/GamblerGleb'">
@@ -62,18 +74,23 @@
                     <h4>Falling Keys</h4>
                 </div>
             </div>
+            <div class="wave three">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
         </article>
-        <article class="contact-me">
+        <article class="contact-me" id="contacts">
             <h2>Contact Me</h2>
             <div class="contacts-container">
                 <div class="form-box">
                     <form class="message-form">
-                        <label for="name">Name</label><br>
-                        <input type="text" name="name" id="name" placeholder="Enter your name" required><br>
+                        <p>Send me a message</p>
                         <br>
-                        <label for="message">Message</label><br>
+                        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                        <br>
                         <textarea rows="4" cols="50" name="message" form="message-form" id="message" placeholder="Enter your message..." required></textarea><br>
-                        <input type="submit" value="Send">
+                        <input type="submit" value="Send" class="art-btn submit">
                     </form>
                 </div>
                 <aside class="contacts">

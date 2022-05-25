@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 h1,
@@ -18,13 +19,82 @@ p {
 }
 
 article {
-    height: 100vh;
-    padding: 1rem 3rem;
+    height: fit-content;
+    padding: 2rem 3rem 7rem 3rem;
+    position: relative;
 }
 
 article h2 {
-    text-align: left;
-    padding-bottom: 1rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+    color: white;
+}
+
+section {
+    overflow: hidden;
+}
+
+/* cool wavy divider */
+
+.wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.one {
+    transform: rotateX(180deg);
+}
+
+.three {
+    transform: rotateX(180deg);
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 85px;
+    
+}
+
+.one svg {
+    width: calc(169% + 1.3px);
+    height: 79px;
+}
+
+.two svg {
+    width: calc(169% + 1.3px);
+    height: 79px;
+}
+
+.three svg {
+    width: calc(130% + 2px);
+    height: 80px;
+}
+
+.one .shape-fill {
+    fill: rgba(3,166,164,1);
+}
+
+.two .shape-fill {
+    fill: rgba(112,0,118,1);
+}
+
+.three .shape-fill {
+    fill: rgb(49, 49, 49);
+}
+
+@media only screen and (max-width: 600px) {
+    article h2 {
+        text-align: center;
+    }
 }
 
 /* navigation */
@@ -36,8 +106,11 @@ article h2 {
     align-items: center;
     height: 4rem;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     background-color: white;
+    overflow: hidden;
+    z-index: 10;
+    box-shadow: 0 0 10px black;
 }
 
 .logo {
@@ -50,8 +123,13 @@ article h2 {
     display: inline-block;
     padding: 1rem;
     font-size: 1.2rem;
+    font-weight: 500;
     height: 4rem;
     transition: background-color 200ms;
+}
+
+.menu-item p {
+    padding-top: 5%;
 }
 
 .menu-item:hover {
@@ -59,38 +137,45 @@ article h2 {
     cursor: pointer;
 }
 
+@media only screen and (max-width: 600px) {
+    .menu {
+        display: none;
+    }
+}
+
 /* header */
+
+.header-wrapper {
+    background: rgb(112,0,118);
+    background: linear-gradient(140deg, rgba(112,0,118,1) 0%, rgba(252,69,69,1) 100%);
+    
+}
 
 header {
     padding-top: 4rem;
-    background-image: url();
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(131, 181, 4);
 }
 
 header h1 {
     font-size: 3rem;
+    color: white;
 }
 
 /* about */
 
-.about {
-    height: 100vh;
-    background-color: orange;
-}
-
 .about-container {
     display: flex; 
     height: 80%;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 2rem;
+    overflow: hidden;
 }
 
 .about-container img {
-    border-radius: 2rem;
+    border-radius: 1rem;
     width: 40vw;
     max-width: 350px;
     align-self: flex-start;
@@ -103,22 +188,36 @@ header h1 {
 .about-container div h3 {
     padding-bottom: 1rem;
     font-size: 2rem;
+    color: white;
 }
 
 .about-container div p {
     font-size: 1.5rem;
+    color: white;
 }
-    
+
+@media only screen and (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-container img {
+        align-self: center;
+        width: 60vw;
+    }
+}
 
 /* education */
 
 .education {
-    background-color: rgb(152, 255, 178);
+    background: rgb(3,166,164);
+    background: linear-gradient(180deg, rgba(3,166,164,1) 0%, rgba(252,167,69,1) 100%);
 }
 
 .education-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -129,23 +228,64 @@ header h1 {
 .education-container div h3 {
     padding-bottom: 1rem;
     font-size: 2rem;
+    color: white;
 }
 
 .education-container div p {
     font-size: 1.5rem;
+    color: white;
 }
 
 .education img {
-    border-radius: 2rem;
+    border-radius: 1rem;
     width: 40vw;
     align-self: flex-start;
     max-width: 350px;
 }
 
+.art-btn {
+    margin: 1rem;
+    font-family: 'Rubik', sans-serif;
+    padding: 1rem;
+    border: 3px solid black;
+    transition: all 300ms;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.art-btn:hover {
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+.art-btn span {
+    padding-right: 0.7rem;
+    padding-left: 0.3rem;
+    transition: all 300ms;
+}
+
+@media only screen and (max-width: 600px) {
+    .education-container {
+        flex-direction: column;
+    }
+    .education img {
+        width: 70vw;
+        align-self: center;
+    }
+    .education-container div {
+        display: flex;
+        flex-direction: column;
+    }
+    .art-btn {
+        width: max-content;
+        align-self: center;
+    }
+}
+
 /* projects */
 
 .projects {
-    background-color: rgb(191, 191, 1);
+    background: rgb(112,0,118);
+    background: linear-gradient(180deg, rgba(112,0,118,1) 0%, rgba(252,69,69,1) 100%);
 }
 
 .projects-container {
@@ -161,26 +301,108 @@ header h1 {
 
 .project h4 {
     text-align: center;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project img {
+        width: 70vw;
+    }
 }
 
 /*contacts */
+
+.contact-me {
+    background-color: rgb(49, 49, 49);
+}
 
 .contacts-container {
     display: flex;
     gap: 2rem;
     justify-content: center;
+    align-items: center;
+    height: max-content;
 }
 
 .form-box {
-    background-color: aquamarine;
+    background-color: rgba(3,166,164,1);
     padding: 2rem;
     border-radius: 1rem;
+    width: 100%;
+    max-width: 450px;
 }
 
 .contacts {
-    background-color: aquamarine;
+    background-color: rgb(198, 135, 62);
     padding: 2rem;
     border-radius: 1rem;
+    width: 100%;
+    max-width: 450px;
+    height: 353px; /* idk why I cant set the height to 100% here */
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.contact img {
+    margin-right: 1rem;
+    filter: invert(1);
+}
+
+textarea {
+    max-width: 100%;
+    border: 3px solid black;
+    font-family: 'Rubik', sans-serif;
+    padding: 0.5rem;
+    font-weight: 500;
+}
+
+input {
+    max-width: 100%;
+    border: 3px solid black;
+    font-family: 'Rubik', sans-serif;
+    padding: 0.5rem;
+    font-weight: 500;
+}
+
+.message-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-form p {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.submit {
+    text-align: center;
+    width: max-content;
+    
+}
+
+@media only screen and (max-width: 930px) {
+    .contacts-container {
+        flex-direction: column;
+    }
+    .contacts {
+        height: max-content;
+    }
+    .submit {
+        align-self: center;
+    }
 }
 
 /* footer */
