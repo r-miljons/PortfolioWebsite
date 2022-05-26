@@ -171,7 +171,6 @@ header h1 {
     height: 80%;
     justify-content: center;
     gap: 2rem;
-    overflow: hidden;
 }
 
 .about-container img {
@@ -179,6 +178,7 @@ header h1 {
     width: 40vw;
     max-width: 350px;
     align-self: flex-start;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
 }
 
 .about-container div {
@@ -241,6 +241,7 @@ header h1 {
     width: 40vw;
     align-self: flex-start;
     max-width: 350px;
+    box-shadow: 0 0 15px rgb(113, 113, 113);
 }
 
 .art-btn {
@@ -290,27 +291,141 @@ header h1 {
 
 .projects-container {
     display: flex;
-    justify-content: space-around;
-    gap: 1rem;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project {
+    background:rgb(243, 243, 243);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px black;
+    transition: all 200ms;
+    width: fit-content;
+}
+
+.project:hover {
+    transform: scale(1.01);
+    cursor: pointer;
 }
 
 .project img {
     width: 40vw;
-    border-radius: 1rem;
+    max-width: 400px;
+    border-radius: 0.2rem;
 }
 
 .project h4 {
     text-align: center;
-    color: white;
+    color: rgb(58, 58, 58);
+    padding: 1rem;
+}
+
+.more {
+    display: none;
+    position: fixed;
+    width: 80vw;
+    max-width: 700px;
+    min-width: 220px;
+    z-index: 9;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 15px grey;
+    top: 15%;
+    align-self: center;
+}
+
+#exit {
+    width: 2rem;
+    text-align: right;
+    padding: 0;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.7rem;
+    transition: all 200ms;
+    filter: invert(0.2);
+}
+
+#exit:hover {
+    transform: scale(1.2);
+    filter: invert(0);
+    cursor: pointer;
+}
+
+.more h2 {
+    color:rgb(42, 42, 42);
+    text-decoration: none;
+    width: 100%;
+    padding: 0 0 1rem 0;
+    text-align: left;
+}
+
+.more-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.more img {
+    width: 40vw;
+    align-self: flex-start;
+    padding-bottom: 1rem;
+}
+
+.more-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.view {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    padding: 1rem 1rem 0 1rem;
+    bottom: 0;
+}
+
+#icon {
+    width: 2.5rem;
+    transition: all 200ms;
+    filter: invert(0.2);
+}
+
+#icon:hover {
+    transform: scale(1.2);
+    filter: invert(0);
+    cursor: pointer;
+}
+
+.more:hover {
+    transform: none;
+    cursor: default;
+}
+
+.dark-overlay {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 8;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 @media only screen and (max-width: 600px) {
     .projects-container {
         flex-direction: column;
-        align-items: center;
     }
     .project img {
         width: 70vw;
+    }
+    .more-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .more img {
+        align-self: center;
     }
 }
 
@@ -343,13 +458,12 @@ header h1 {
     width: 100%;
     max-width: 450px;
     height: 353px; /* idk why I cant set the height to 100% here */
+    overflow: hidden;
 }
 
 .contact {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    overflow: hidden;
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
@@ -393,7 +507,7 @@ input {
     
 }
 
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width: 940px) {
     .contacts-container {
         flex-direction: column;
     }
@@ -402,6 +516,12 @@ input {
     }
     .submit {
         align-self: center;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .contact {
+        font-size: 3vw;
     }
 }
 
