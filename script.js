@@ -1,3 +1,30 @@
+// hamburger menu
+
+const hamburger = document.querySelector(".hamburger");
+const close = document.querySelector(".close");
+
+function clickHamburger() {
+    hamburger.style.animation = "rollOut 250ms forwards ease-in";
+    setTimeout(function () {
+        hamburger.style.display = "none";
+        close.style.display = "block";
+        close.style.animation = "rollIn 500ms forwards ease-out"
+    },250);
+}
+
+hamburger.addEventListener("click", clickHamburger);
+
+function clickClose() {
+    close.style.animation = "rollOut 250ms forwards ease-in";
+    setTimeout(function () {
+        close.style.display = "none";
+        hamburger.style.display = "block";
+        hamburger.style.animation = "rollIn 500ms forwards ease-out"
+    },250);
+}
+
+close.addEventListener("click", clickClose);
+
 // more info about projects when clicking on them
 
 const viewProjects = document.querySelectorAll(".more");
