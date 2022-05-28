@@ -25,6 +25,42 @@ function clickClose() {
 
 close.addEventListener("click", clickClose);
 
+//dropdown
+
+const dropDownMenu = document.querySelector(".dropdown-menu");
+const dropDownMenuItem = document.querySelectorAll(".dropdown-menu ul li");
+
+function dropDown() {
+    dropDownMenu.style.top = "0";
+}
+
+hamburger.addEventListener("click", dropDown);
+
+function pullUp() {
+    dropDownMenu.style.top = "-20rem";
+}
+
+close.addEventListener("click", pullUp);
+
+dropDownMenuItem[0].addEventListener("click", () => {
+    pullUp();
+    clickClose();
+});
+dropDownMenuItem[1].addEventListener("click", () => {
+    pullUp();
+    clickClose();
+});
+dropDownMenuItem[2].addEventListener("click", () => {
+    pullUp();
+    clickClose();
+});
+dropDownMenuItem[3].addEventListener("click", () => {
+    pullUp();
+    clickClose();
+});
+
+
+
 // more info about projects when clicking on them
 
 const viewProjects = document.querySelectorAll(".more");
