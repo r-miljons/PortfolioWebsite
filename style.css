@@ -97,6 +97,12 @@ section {
     }
 }
 
+.anchor {
+    position: relative;
+    top: -4rem;
+    visibility: hidden;
+}
+
 /* navigation */
 
 .nav-box {
@@ -145,7 +151,7 @@ section {
     height: 2rem;
     perspective: 300px;
     display: none;
-    margin-right: 1.5rem;
+    margin-right: 0.5rem;
     position: relative;
 }
 
@@ -164,7 +170,7 @@ section {
     height: 3rem;
     perspective: 300px;
     display: none;
-    margin-right: 1rem;
+    margin-right: 0;
 }
 
 .close img {
@@ -188,7 +194,7 @@ section {
     height: fit-content;
     width: 100%;
     box-shadow: 0 0 15px black;
-    top: -20rem;
+    top: -25rem;
     transition: top 500ms;
 }
 
@@ -203,6 +209,7 @@ section {
     padding: 0.5rem;
     transition: all 0.3s;
     width: 45%;
+    min-width: 15rem;
     margin: 0 auto;
     display: flex;
     gap: 1rem;
@@ -570,7 +577,7 @@ header h1 {
 }
 
 .contacts {
-    background-color: rgb(198, 135, 62);
+    background-color: rgb(154, 4, 154);
     padding: 2rem;
     border-radius: 1rem;
     width: 100%;

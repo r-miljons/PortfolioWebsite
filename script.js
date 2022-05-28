@@ -37,27 +37,23 @@ function dropDown() {
 hamburger.addEventListener("click", dropDown);
 
 function pullUp() {
-    dropDownMenu.style.top = "-20rem";
+    dropDownMenu.style.top = "-25rem";
 }
 
 close.addEventListener("click", pullUp);
 
-dropDownMenuItem[0].addEventListener("click", () => {
-    pullUp();
-    clickClose();
-});
-dropDownMenuItem[1].addEventListener("click", () => {
-    pullUp();
-    clickClose();
-});
-dropDownMenuItem[2].addEventListener("click", () => {
-    pullUp();
-    clickClose();
-});
-dropDownMenuItem[3].addEventListener("click", () => {
-    pullUp();
-    clickClose();
-});
+function closeMenu() {
+    setTimeout(() => {
+        pullUp();
+        clickClose();
+    }, 300);
+}
+
+dropDownMenuItem[0].addEventListener("click", closeMenu);
+dropDownMenuItem[1].addEventListener("click", closeMenu);
+dropDownMenuItem[2].addEventListener("click", closeMenu);
+dropDownMenuItem[3].addEventListener("click", closeMenu);
+
 
 
 
