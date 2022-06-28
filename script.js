@@ -25,7 +25,7 @@ function clickClose() {
 
 close.addEventListener("click", clickClose);
 
-//dropdown
+//dropdown menu
 
 const dropDownMenu = document.querySelector(".dropdown-menu");
 const dropDownMenuItem = document.querySelectorAll(".dropdown-menu ul li");
@@ -49,10 +49,10 @@ function closeMenu() {
     }, 300);
 }
 
-dropDownMenuItem[0].addEventListener("click", closeMenu);
-dropDownMenuItem[1].addEventListener("click", closeMenu);
-dropDownMenuItem[2].addEventListener("click", closeMenu);
-dropDownMenuItem[3].addEventListener("click", closeMenu);
+dropDownMenuItem.forEach(element => {
+    element.addEventListener("click", closeMenu);
+});
+
 
 
 
@@ -62,6 +62,8 @@ dropDownMenuItem[3].addEventListener("click", closeMenu);
 const viewProjects = document.querySelectorAll(".more");
 const gleb = document.querySelector(".gleb");
 const keys = document.querySelector(".keys");
+const pong = document.querySelector(".pong");
+const mafia = document.querySelector(".mafia");
 
 const darkOverlay = document.querySelector(".dark-overlay");
 const exitButton = document.querySelectorAll("#exit")
@@ -76,19 +78,30 @@ function showProjectKeys() {
     viewProjects[1].style.display = "block";
     darkOverlay.style.display = "block";
 }
+function showProjectPong() {
+    viewProjects[2].style.display = "block";
+    darkOverlay.style.display = "block";
+}
+function showProjectMafia() {
+    viewProjects[3].style.display = "block";
+    darkOverlay.style.display = "block";
+}
 
 gleb.addEventListener("click", showProjectGleb);
 keys.addEventListener("click", showProjectKeys);
+pong.addEventListener("click", showProjectPong);
+mafia.addEventListener("click", showProjectMafia);
 
 function closeProjects() {
-    viewProjects[0].style.display = "";
-    viewProjects[1].style.display = "";
+    viewProjects.forEach(element => {
+        element.style.display = "";
+    });
     darkOverlay.style.display = "";
 }
 
-exitButton[0].addEventListener("click", closeProjects);
-exitButton[1].addEventListener("click", closeProjects);
-
+exitButton.forEach(element => {
+    element.addEventListener("click", closeProjects);
+})
 
 // see my art button
 

@@ -8,10 +8,13 @@
 }
 
 h1,
-h2,
 h3,
 h4 {
     font-family: 'Rubik', sans-serif;
+}
+
+h2 {
+    font-family: 'Public Sans', sans-serif;
 }
 
 p {
@@ -27,8 +30,7 @@ article {
 article h2 {
     text-align: center;
     padding-bottom: 2rem;
-    text-decoration: underline;
-    text-underline-offset: 0.2rem;
+    text-shadow: 0 0 15px black;
     color: white;
 }
 
@@ -116,33 +118,39 @@ section {
     width: 100vw;
     background-color: rgb(70, 70, 70);
     overflow: hidden;
-    z-index: 10;
+    z-index: 11;
     box-shadow: 0 0 10px black;
 }
 
 .logo {
     width: 2rem;
     height: 2rem;
-    background-color: orange;
+    background-color: rgb(255, 255, 255);
+}
+
+.menu {
+    margin: 0 auto;
 }
 
 .menu-item {
     display: inline-block;
     padding: 1rem;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 300;
     height: 4rem;
-    transition: background-color 200ms;
 }
 
 .menu-item p {
     padding-top: 5%;
     color: white;
+    transition: color 400ms;
+}
+
+.menu-item p:hover {
+    color: rgb(193, 2, 193);
 }
 
 .menu-item:hover {
-    background-color: rgb(193, 2, 193);
-    box-shadow: 0 0 20px rgb(193, 2, 193);
     cursor: pointer;
 }
 
@@ -187,7 +195,7 @@ section {
     position: fixed;
     display: flex;
     background-color: rgb(103, 103, 103);
-    z-index: 9;
+    z-index: 10;
     justify-content: center;
     padding-top: 5rem;
     padding-bottom: 1rem;
@@ -205,22 +213,21 @@ section {
 
 .dropdown-menu li {
     font-size: 2rem;
+    font-weight: 320;
     color: white;
     padding: 0.5rem;
-    transition: all 0.3s;
-    width: 45%;
+    padding-left: 2rem;
+    width: 100%;
     min-width: 15rem;
     margin: 0 auto;
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
+    transition: all 0.4s;
 }
 
 .dropdown-menu li:hover {
-    background-color: rgb(193, 2, 193);
-    box-shadow: 0 0 20px rgb(193, 2, 193);
-    width: 100%;
-    color: white;
+    color: rgb(193, 2, 193);
     cursor: pointer;
 }
 
@@ -260,14 +267,7 @@ section {
     }
 }
 
-@media only screen and (min-width: 600px) {
-    .hamburger {
-        display: none;
-    }
-    .close {
-        display: none;
-    }
-}
+
 
 /* header */
 
@@ -342,12 +342,9 @@ header h1 {
 
 .education-container {
     display: flex;
+    align-items: flex-start;
     justify-content: center;
-    gap: 1rem;
-}
-
-.education-container div {
-    max-width: 400px;
+    column-gap: 3rem;
 }
 
 .education-container div h3 {
@@ -356,30 +353,20 @@ header h1 {
     color: white;
 }
 
-.education-container div p {
-    font-size: 1.5rem;
-    color: white;
-}
-
-.education img {
-    border-radius: 1rem;
-    width: 40vw;
-    align-self: flex-start;
-    max-width: 350px;
-    box-shadow: 0 0 15px rgb(113, 113, 113);
-}
-
 .art-btn {
-    margin: 1rem;
+    margin: 1rem 0;
     font-family: 'Rubik', sans-serif;
     padding: 1rem;
     border: 3px solid black;
     transition: all 300ms;
     text-transform: uppercase;
     font-weight: 600;
+    width: max-content;
+    align-self: center;
 }
 
 .art-btn:hover {
+    cursor: pointer;
     box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -389,21 +376,34 @@ header h1 {
     transition: all 300ms;
 }
 
-@media only screen and (max-width: 600px) {
+.card {
+    display: flex;
+    border-radius: 1rem;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: rgb(240, 240, 240);
+    max-width: 500px;
+    padding-bottom: 1rem;
+    box-shadow: 0 0 15px rgb(104, 104, 104);
+    margin-bottom: 2rem;
+}
+
+.card img {
+    align-self: flex-start;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1.5rem;
+    color: rgb(27, 27, 27);
+    padding: 0.5rem 1.5rem 0;
+}
+
+@media only screen and (max-width: 900px) {
     .education-container {
         flex-direction: column;
-    }
-    .education img {
-        width: 70vw;
-        align-self: center;
-    }
-    .education-container div {
-        display: flex;
-        flex-direction: column;
-    }
-    .art-btn {
-        width: max-content;
-        align-self: center;
+        align-items: center;
     }
 }
 
@@ -417,16 +417,18 @@ header h1 {
 .projects-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 2rem;
 }
 
 .project {
     background:rgb(243, 243, 243);
-    padding: 1rem;
     border-radius: 1rem;
     box-shadow: 0 0 15px black;
     transition: all 200ms;
     width: fit-content;
+    max-width: 300px;
+    overflow: hidden;
 }
 
 .project:hover {
@@ -434,16 +436,23 @@ header h1 {
     cursor: pointer;
 }
 
-.project img {
-    width: 40vw;
-    max-width: 400px;
+.project-image {
+    width: 100%;
     border-radius: 0.2rem;
 }
 
 .project h4 {
     text-align: center;
     color: rgb(58, 58, 58);
-    padding: 1rem;
+    font-size: 1.3rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.project p {
+    font-size: 1rem;
+    color: rgb(27, 27, 27);
+    text-align: center;
+    padding: 0 1rem 1rem 1rem;
 }
 
 .more {
@@ -453,17 +462,22 @@ header h1 {
     max-width: 700px;
     min-width: 220px;
     z-index: 9;
-    padding: 1rem 2rem;
+    padding: 3rem 2rem;
     box-shadow: 0 0 15px grey;
     top: 15%;
     align-self: center;
 }
 
+.more p {
+    text-align: left;
+    padding: 0;
+}
+
 #exit {
     width: 2rem;
-    text-align: right;
     padding: 0;
     position: absolute;
+    justify-self: flex-start;
     top: 0.5rem;
     right: 0.7rem;
     transition: all 200ms;
@@ -479,28 +493,29 @@ header h1 {
 .more h2 {
     color:rgb(42, 42, 42);
     text-decoration: none;
+    font-family: 'Rubik', sans-serif;
     width: 100%;
-    padding: 0 0 1rem 0;
+    padding: 0.4rem 0;
     text-align: left;
+    text-shadow: none;
 }
 
 .more-container {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    padding: 0 1rem;
 }
 
-.more img {
+.more-image {
     width: 40vw;
+    max-width: 350px;
     align-self: flex-start;
-    padding-bottom: 1rem;
 }
 
 .more-text {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .view {
@@ -508,7 +523,8 @@ header h1 {
     gap: 1rem;
     justify-content: flex-end;
     padding: 1rem 1rem 0 1rem;
-    bottom: 0;
+    align-self: flex-end;
+    margin-top: auto;
 }
 
 #icon {
@@ -551,6 +567,12 @@ header h1 {
     }
     .more img {
         align-self: center;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .more {
+        padding: 2rem;
     }
 }
 

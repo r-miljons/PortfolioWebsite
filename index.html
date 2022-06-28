@@ -35,20 +35,21 @@
     </div>
     <section>
     <div class="header-wrapper">
-    <header>
-        <h1>Renārs Miljons</h1>
-    </header>
+    <!-- Page hero section placeholder
+        <header>
+            <h1>Renārs Miljons</h1>
+        </header>
+    -->
         <a class="anchor"  id="about"></a>
         <article class="about">
             <h2>About Me</h2>
             <div class="about-container">
                 <img src="./assets/profile.png" alt="profile picture">
                 <div>
-                    <h3>Renārs Miljons</h3>
+                    <h3>Hi, I'm Renārs</h3>
                     <p>
-                        Lorem ipsum my dripsum is pricsum I like to study n stuff.
-                        <br> Big block of very interesting text about who I am as a person goes here, should be consise and very informative.
-                        <br> Yes Sir.
+                        I'm an aspiring self-taught web developer.
+                        <br> I find meaning in building new things and challenging myself.
                     </p>
                 </div>
             </div>
@@ -63,15 +64,29 @@
         <article class="education">
             <h2>Education</h2>
             <div class="education-container">
-                <div>
+                <div class="art-academy">
                     <h3>Art Academy of Latvia</h3>
-                    <p>
-                        I studied painting n stuff this text should tell about some of the experience and skills I gained learning as a painter.
-                        <br> Also a link to some of my paintings and drawings because why not.
-                    </p>
-                    <button class="art-btn" onclick="location.href='#'">See my art <span>></span></button>
+                    <div class="card">
+                        <img src="./assets/akademija.png" alt="picture of art academy">
+                        <p>
+                            Before finding my passion in coding, I was a painter at the Art Academy of Latvia. 
+                            <br> There I learned about the importance of the visual aspect of things and had a lot of fun exploring my creative style.
+                            <br> 
+                        </p>
+                        <button class="art-btn" onclick="location.href='#'">See my art <span>></span></button>
+                    </div>
                 </div>
-                <img src="./assets/akademija.png" alt="picture of art academy">
+                <div class="codecademy">
+                    <h3>Codecademy</h3>
+                    <div class="card">
+                        <img src="./assets/codecademy.png" alt="codecademy website">
+                        <p>
+                            Through Codecademy I've learned to work with JavaScript, CSS, HTML, Git and met new friends. 
+                            <br> 
+                            <br> 
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="wave two">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -84,15 +99,16 @@
             <h2>Projects</h2>
             <div class="projects-container">
                 <div class="project gleb">
-                    <img src="./assets/gamblergleb-ss.png">
+                    <img class="project-image" src="./assets/gamblergleb-ss.png">
                     <h4>Gambler Gleb</h4>
+                    <p>Gambling mini-game</p>
                 </div>
                 <div class="project more">
                     <img id="exit" src="./assets/exit.svg">
-                    <h2>Gambler Gleb</h2>
                     <div class="more-container">
-                        <img src="./assets/gamblergleb.gif" alt="gambler gleb footage">  
-                        <div class="more-text">    
+                        <img class="more-image" src="./assets/gamblergleb.gif" alt="gambler gleb footage">  
+                        <div class="more-text"> 
+                            <h2>Gambler Gleb</h2>   
                             <p>A gambling mini-game where drinking beer multiplies your winnings.
                                 <br>
                                 <br>Made using JS/CSS/HTML. 
@@ -105,16 +121,17 @@
                     </div>
                 </div>
                 <div class="project keys">
-                    <img src="./assets/fallingkeys-ss.png">
+                    <img class="project-image" src="./assets/fallingkeys-ss.png">
                     <h4>Falling Keys</h4>
+                    <p>Touch typing practice game</p>
                 </div>
-                
+
                 <div class="project more">
                     <img id="exit" src="./assets/exit.svg">
-                    <h2>Falling Keys</h2>
                     <div class="more-container">
-                        <img src="./assets/fallingkeys.gif" alt="falling keys footage">
-                        <div class="more-text">    
+                        <img class="more-image" src="./assets/fallingkeys.gif" alt="falling keys footage">
+                        <div class="more-text"> 
+                            <h2>Falling Keys</h2>   
                             <p>A game I made to practice <em>touch typing</em> - typing with muscle memory, not looking at the keyboard.
                                 <br>
                                 <br>Made using JS/CSS/HTML. 
@@ -122,6 +139,53 @@
                             <div class="view">
                                 <img id="icon" src="./assets/go-to.svg" onclick="location.href='https://r-miljons.github.io/FallingKeys/'">
                                 <img id="icon" src="./assets/github-icon.svg" onclick="location.href='https://github.com/r-miljons/FallingKeys'">
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="project pong">
+                    <img class="project-image" src="./assets/pongwars.png">
+                    <h4>Pong Wars</h4>
+                    <p>Two player game of pong!</p>
+                </div>
+                <div class="project more">
+                    <img id="exit" src="./assets/exit.svg">
+                    <div class="more-container">
+                        <img class="more-image" src="./assets/pongwars.gif" alt="pong game in action">
+                        <div class="more-text"> 
+                            <h2>Pong Wars</h2>   
+                            <p>It's a two player game where one player uses the arrow keys and the other - W and S keys.
+                                It has a fun feature where you can pick up a mystery box that will give you either an advantage or a challenge
+                                <br>
+                                <br>Made using JS/CSS/HTML. 
+                            </p>
+                            <div class="view">
+                                <img id="icon" src="./assets/go-to.svg" onclick="location.href='https://r-miljons.github.io/PongWars/'">
+                                <img id="icon" src="./assets/github-icon.svg" onclick="location.href='https://github.com/r-miljons/PongWars'">
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="project mafia">
+                    <img class="project-image" src="./assets/mafia.png">
+                    <h4>Mafia Bot</h4>
+                    <p>Discord bot for party game Mafia - CodeX Hackathon challenge winner!</p>
+                </div>
+                <div class="project more">
+                    <img id="exit" src="./assets/exit.svg">
+                    <div class="more-container">
+                        <img class="more-image" src="./assets/mafia.gif" alt="discord bot in action">
+                        <div class="more-text"> 
+                            <h2>Mafia Bot</h2>   
+                            <p>Mafia is a discord bot that will host the popular party game mafia in your discord server.
+                                <br>This project was made for the CodeX 2022 Riga Tech Girls challenge and won!
+                                <br>To see more about it go to the github repository by clicking on the github logo.
+                                <br>
+                                <br>Made using JS and Discord API.
+                            </p>
+                            <div class="view">
+                                <img id="icon" src="./assets/github-icon.svg" onclick="location.href='https://github.com/r-miljons/MafiaBot'">
                             </div>
                         </div>
                     </div> 
